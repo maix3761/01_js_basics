@@ -9,16 +9,49 @@
 </head>
 
 <body>
-
+    <input type="text" id="besked">
+    <button>Klik og få besked!</button>
 
     <script>
-        let timer = 3;
-        let udledning = 109;
-        let tilsammen = timer * udledning;
+        //        let timer = 3;
+        // let udledning = 109;
+        // let tilsammen = timer * udledning;
+        //
+        // let resultat = `Ved ${timer} timers flyrejse har du udledt ${tilsammen} kg CO2`;
+        // console.log(resultat);
+        //
+        // if (udledning < 100) { // resultat="Tæt på Thunberg" ; // else if (udledning 100 || 200) { // resultat="Ja ja, du behøver ikke at melde dig ud af Å!" ; // } else if (udledning 200 || 600) { // resultat="Det er godt for turismen i nordeuropa." ; // } else(udledning> 600) {
+        // resultat = "Nå ja vi kan jo altid kolonisere en anden planet ...";
+        // }
+        //
+        // }
 
-        let resultat = `Ved  ${timer} timers flyrejse har du udledt ${tilsammen} kg CO2`;
-        console.log(resultat);
+        document.querySelector("button").addEventListener("click", buttonClick);
 
+        function buttonClick() {
+
+
+            let timer = 3;
+            let udledning = 109;
+            let tilsammen = timer * udledning;
+
+            let resultat = `Ved ${timer} timers flyrejse har du udledt ${tilsammen} kg CO2`;
+            console.log(resultat);
+
+
+            if (udledning < 100) {
+                resultat = "Tæt på Thunberg";
+
+            } else if (udledning > 100 || 200) {
+                resultat = "Ja ja, du behøver ikke at melde dig ud af Å!";
+
+            } else if (udledning > 200 || 600) {
+                resultat = "Det er godt for turismen i nordeuropa.";
+
+            } else(udledning > 600) {
+                resultat = "Nå ja vi kan jo altid kolonisere en anden planet...";
+            }
+        }
 
 
         //        co2UdledtIKgVedFlyrejse = timer x 109
